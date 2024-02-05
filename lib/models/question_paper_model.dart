@@ -18,7 +18,7 @@ import 'dart:ffi';
 class QuestionPaperModel {
   String? id;
   String? title;
-  String? imageUrl;
+  String? image_url;
   String? description;
   int? timeSeconds;
   late List<Questions> questions;
@@ -26,7 +26,7 @@ class QuestionPaperModel {
   QuestionPaperModel(
       {this.id,
       this.title,
-      this.imageUrl,
+      this.image_url,
       this.description,
       this.timeSeconds,
       required this.questions});
@@ -34,7 +34,7 @@ class QuestionPaperModel {
   QuestionPaperModel.fromJson(Map<String, dynamic> json) {
     id = json['id'] as String;
     title = json['title'] as String;
-    imageUrl = json['image_url'] as String;
+    image_url = json['image_url'] as String;
     description = json['Description'] as String;
     timeSeconds = json['time_seconds'];
     // questions = (json["questions"] as List).map((dynamic e) => Questions.fromJson(e as Map<String, dynamic>)).toList();
@@ -51,7 +51,7 @@ class QuestionPaperModel {
     Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
     data['title'] = this.title;
-    data['image_url'] = this.imageUrl;
+    data['image_url'] = this.image_url;
     data['Description'] = this.description;
     data['time_seconds'] = this.timeSeconds;
     return data;
