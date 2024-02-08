@@ -1,7 +1,9 @@
 
 
 import 'package:flutter_study_app/controllers/auth_controller.dart';
+import 'package:flutter_study_app/controllers/question_paper/question_paper_controller.dart';
 import 'package:flutter_study_app/controllers/theme_controller.dart';
+import 'package:flutter_study_app/services/firebase_storage_service.dart';
 import 'package:get/get.dart';
 
 class InitialBindings implements Bindings {
@@ -9,6 +11,8 @@ class InitialBindings implements Bindings {
   void dependencies() {
     Get.put(AuthController(),permanent: true);
     Get.put(ThemeController());
+    Get.put(QuestionPaperController());
+    Get.put(FirebaseStorageService());
   }
 
 }
