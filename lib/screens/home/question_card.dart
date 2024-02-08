@@ -22,8 +22,9 @@ class QuestionCard extends StatelessWidget {
         color: Theme.of(context).cardColor
       ),
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(20),
         child: Stack(
+          clipBehavior: Clip.none,
           children: [
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,7 +64,6 @@ class QuestionCard extends StatelessWidget {
                         padding: EdgeInsets.only(top: 10,bottom: 5),
                         child: Text(model.description!)
                       ),
-      
                       Row(
                         children: [
                           AppIconText(
@@ -87,7 +87,24 @@ class QuestionCard extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
+            Positioned(
+              bottom: -Dimensions.height10*2,
+              right: -Dimensions.width10*2,
+              child: GestureDetector(
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: Dimensions.height10*1.2,horizontal: Dimensions.height10*2),
+                  child: Icon(Icons.wine_bar),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(Dimensions.height10),
+                      bottomRight: Radius.circular(Dimensions.height10)
+                    )
+                  ),
+                ),
+              )
+            ),
           ],
         ),
       ),
