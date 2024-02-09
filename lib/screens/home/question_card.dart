@@ -94,7 +94,7 @@ class QuestionCard extends StatelessWidget {
               child: GestureDetector(
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: Dimensions.height10*1.2,horizontal: Dimensions.height10*2),
-                  child: Icon(Icons.wine_bar),
+                  child: Icon(Icons.library_books),
                   decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.only(
