@@ -17,17 +17,19 @@ class HomeScreen extends GetView<MyDrawerController> {
   @override
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
+    // MyDrawerController _mydrawercontroller = Get.find();
     return Scaffold(
       body: GetBuilder<MyDrawerController>(builder: (_) {
         return ZoomDrawer(
           borderRadius: Dimensions.height10*5,
           showShadow: true,
-          angle: 0,
-          // slideWidth: Dimensions.screenWidth*0.6,
+          angle: 0.0,
+          slideWidth: Dimensions.screenWidth*0.7,
           // openCurve: Curves.easeIn,
           // closeCurve: Curves.easeInBack,
           controller: _.zoomDrawerController,
           style: DrawerStyle.defaultStyle,
+          menuBackgroundColor: Colors.grey,
           menuScreen: MenuScreen(),
           mainScreen: Container(
             decoration: BoxDecoration(gradient: mainGradient()),
@@ -42,8 +44,17 @@ class HomeScreen extends GetView<MyDrawerController> {
                       children: [
                         AppCircleButton(
                           child: Icon(Icons.menu, size: Dimensions.height10 * 2.5),
+                          // onTap: _mydrawercontroller.toggleDrawer,
                           onTap: controller.toggleDrawer,
+                          
                         ),
+                        // GestureDetector(
+                        //   child: Icon(Icons.menu,size: Dimensions.height10 * 2.5),
+                        //   onTap: (){
+                        //     controller.toggleDrawer();
+                        //   },
+                        // ),
+                       
                         SizedBox(height: Dimensions.height10),
                         Padding(
                           padding: EdgeInsets.symmetric(vertical: 10),

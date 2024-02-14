@@ -8,6 +8,7 @@ final fireStore = FirebaseFirestore.instance;
 Reference get firebaseStorage => FirebaseStorage.instance.ref();
 
 final questionPaperRef = fireStore.collection("questionPapers");
+final userRef = fireStore.collection("users");
 
 DocumentReference questionRef({
   required String paperId,

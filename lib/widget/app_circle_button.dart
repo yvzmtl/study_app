@@ -21,8 +21,10 @@ class AppCircleButton extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       shape: CircleBorder(),
       child: InkWell(
-        child: child,
         onTap: onTap,
+        // child: Padding(padding: EdgeInsets.all(10),child: child,),
+        child: child,
+        
         // child: Icon(Icons.arrow_back_ios),
       ),
     );
