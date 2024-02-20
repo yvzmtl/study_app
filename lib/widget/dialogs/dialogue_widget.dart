@@ -31,7 +31,7 @@ class Dialogs {
         ],
       ),
       actions: [
-        TextButton(onPressed: onTap, child: CustomText(text: "Tamam"))
+        TextButton(onPressed: onTap, child: CustomText(text: "Giriş Yap"))
       ],
     );
   }

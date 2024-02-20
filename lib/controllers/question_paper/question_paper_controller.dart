@@ -40,7 +40,7 @@ class QuestionPaperController extends GetxController {
       if (tryAgain) {
         Get.back();
       } else {
-        
+        print("Login olunmuş");
       }
     } else {
       _authController.showLoginAlertDialog();

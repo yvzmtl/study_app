@@ -14,6 +14,8 @@ import 'package:get/get.dart';
 class HomeScreen extends GetView<MyDrawerController> {
   const HomeScreen({super.key});
 
+  static const String routeName = "/home";
+
   @override
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
@@ -40,6 +42,7 @@ class HomeScreen extends GetView<MyDrawerController> {
                   Padding(
                     padding: const EdgeInsets.all(25),
                     child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AppCircleButton(
